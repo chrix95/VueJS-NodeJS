@@ -1,5 +1,5 @@
 <template>
-  <div>
+   <div>
     <h1>Register</h1>
     <div>
       <input type="email" name="email" placeholder="Email" v-model="email"> <br><br>
@@ -25,12 +25,17 @@ export default {
   },
   methods: {
     async register () {
+      this.error = null
+      this.success = null
       try {
         const response = await AuthenticationService.register({
           email: this.email,
           password: this.password
         })
         this.success = response.data.message
+        setTimeout(() => {
+          this.success = null
+        }, 5000)
       } catch (error) {
         this.error = error.response.data.error
         setTimeout(() => {
@@ -43,8 +48,5 @@ export default {
 </script>
 
 <style scoped>
-.error {
-  color: red;
-  font-size: 14px;
-}
+
 </style>

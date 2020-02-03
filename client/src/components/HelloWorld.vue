@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h3>{{ msg }}</h3>
+    <h4>Essential Links</h4>
     <ul>
       <li>
         <a
@@ -45,7 +45,7 @@
         </a>
       </li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h4>Ecosystem</h4>
     <ul>
       <li>
         <a
@@ -88,7 +88,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Tab tracker App'
     }
   }
 }
